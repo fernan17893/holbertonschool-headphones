@@ -1,0 +1,543 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Source sans pro';
+    src: url('/fonts/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Spin Cycle';
+    src: url('/fonts/SourceSansPro-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'holberton_school-icon';
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4');
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+      url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+      url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+      url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .holberton_school-icon-arrow_1:before {
+    content: "\e900";
+  }
+  .holberton_school-icon-arrow_2:before {
+    content: "\e901";
+  }
+  .holberton_school-icon-arrow_3:before {
+    content: "\e902";
+  }
+  .holberton_school-icon-arrow_4:before {
+    content: "\e903";
+  }
+  .holberton_school-icon-arrow_5:before {
+    content: "\e904";
+  }
+  .holberton_school-icon-check:before {
+    content: "\e905";
+  }
+  .holberton_school-icon-ic_bag:before {
+    content: "\e906";
+  }
+  .holberton_school-icon-ic_cart:before {
+    content: "\e907";
+  }
+  .holberton_school-icon-ic_facebook:before {
+    content: "\e908";
+  }
+  .holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+  }
+  .holberton_school-icon-ic_instagram:before {
+    content: "\e90a";
+  }
+  .holberton_school-icon-ic_laptop:before {
+    content: "\e90b";
+  }
+  .holberton_school-icon-ic_money:before {
+    content: "\e90c";
+  }
+  .holberton_school-icon-ic_music:before {
+    content: "\e90d";
+  }
+  .holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+  }
+  .holberton_school-icon-ic_twitter:before {
+    content: "\e90f";
+  }
+  .holberton_school-icon-ic_video:before {
+    content: "\e910";
+  }
+  .holberton_school-icon-menu:before {
+    content: "\e911";
+  }
+  .holberton_school-icon-search_1:before {
+    content: "\e912";
+  }
+  .holberton_school-icon-search_2:before {
+    content: "\e913";
+  }
+  .holberton_school-icon-star:before {
+    content: "\e914";
+  }
+
+:root {
+    /* FONTS */
+    --font-family: 'Source sans pro';
+    --font-family-alt: 'Spin Cycle';
+
+    /* COLORS */
+    --red: #FF6565;
+    --white: #FFFFFF;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+.header-hero {
+    background-image: url('/images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+
+}
+
+header {
+    position: absolute;
+    width: 1000px;
+    height: 32px;
+    left: 201px;
+    top: 47px;
+}
+
+header .nav_links {
+    position: absolute;
+    width: 455px;
+    height: 15px;
+    left: 946px;
+    top: 10px;
+}
+
+.nav_links li {
+    display: inline;
+    padding: 0px 20px;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 15px;
+    color: var(--white);
+    list-style: none;
+
+}
+
+.nav_links li:hover {
+    cursor: pointer;
+    color: var(--red);
+}
+
+.hero h1 {
+    position: absolute;
+    height: 40px;
+    left: 5%;
+    right: 5%;
+    top: 30%;
+    font-family: var(--font-family-alt);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero_title {
+    position: absolute;
+    height: 20px;
+    left: 22%;
+    right: 22%;
+    top: 40%;
+    font-family: var(--font-family-alt);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--white);
+}
+
+button {
+    position: absolute;
+    background-color: var(--red);
+    border-radius: 22px;
+    border: none;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+    color: #FFFFFF;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.hero button {
+    position: absolute;
+    width: 230px;
+    height: 50px;
+    left: 44%;
+    right: 40%;
+    top: 50%;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 18px;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero_par {
+    position: absolute;
+    width: 637px;
+    height: 104px;
+    left: 32%;
+    right: 22%;
+    top: 65%;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: var(--white);
+}
+
+
+@media screen and (max-width: 755px) {
+
+    .header_hero {
+        width: 768px;
+        height: 800px;
+    }
+
+    header {
+     width: 633px;
+     height: 32px;
+     left: 66px;
+     top: 29px;
+    }
+
+    header img {
+        width: 161px;
+        height: 32px;
+        left: 66px;
+        top: 29px;
+    }
+
+    header .nav_links {
+        width: 255px;
+        height: 15px;
+        left: 300px;
+        top: -5px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+
+    }
+
+    .nav_links li{
+        font-size: 16px;
+        line-height: 15px;
+        white-space: nowrap; 
+    }
+
+    .hero button {
+        left: 270px;
+    }
+    
+    .hero .hero_par {
+        left: 80px;
+    }
+}    
+
+@media screen and (max-width: 480px) {
+
+    :root {
+        --nav-item-margin: 0;
+    }
+
+    .navbar-menu {
+        flex: 1;
+    }
+
+    header {
+        justify-content: center;
+    }
+    
+    header img {
+        position: absolute;
+        width: 170px;
+        height: 32px;
+        top: 29px;
+    }
+
+    header .nav_links {
+        overflow: hidden;
+        flex-direction: column;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+
+    header .menu-icon {
+        cursor: pointer;
+        padding: 2.5rem;
+        position: relative;
+        user-select: none;
+        display: none;
+    }
+
+    header .menu-icon .navicon {
+        background: var(--white);
+        display: block;
+        height: .2rem;
+        position: relative;
+        width: 1.8rem;
+        left: -45px;;
+      }
+
+      header .menu-icon .navicon:before, header .menu-icon .navicon::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: var(--white);
+        transition: all .2s ease-out;
+        }
+    
+        header .menu-icon .navicon:before {
+            top: .7rem;
+        }
+    
+        header .menu-icon .navicon:after {
+            top: -0.7rem;
+        }
+
+        header .nav_links {
+            width: 161px;
+            height: 32px;
+            top: 60px;
+            left: 70px;
+            font-size: 25px;
+        }
+
+        .nav_links li {
+            font-size: 16px;
+            line-height: 15px;
+            white-space: nowrap;
+            margin: var(--nav-item-margin);
+        }
+
+        .hero button {
+            left: 130px;
+        }
+
+        .hero .hero_par {
+            width: 335px;
+            left: 78px;
+        }
+
+    }
+
+/* menu btn */
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked ~ .nav_links {
+    display: block;
+}
+
+.menu-btn:checked ~ .nav_links {
+    max-height: 100%;
+    overflow: inherit;
+}
+
+header .menu-btn:checked + .menu-icon .navicon {
+    background: transparent;
+} 
+
+header .menu-btn:checked + .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header .menu-btn:checked + .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu-btn:checked + .menu-icon .navicon:before, header .menu-btn:checked + .menu-icon .navicon:after {
+    top: 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    header .menu-icon {
+        display: block;
+    }
+    
+}
+
+/* WHAT WE DO */
+
+.whatwedo {    
+    background-color: var(--white);
+    width: 1400px;
+    height: 900px;
+    left: 0px;
+    top: 0px;  
+
+}
+
+.whatwedo .container {
+    position: absolute;
+    width: 637px;
+    height: 184px;
+    left: 602px;
+    top: 1090px;
+}
+
+.whatwedo .container h1 {
+    position: absolute;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-size: 35px;
+    line-height: 38px;
+    color: #071629;
+    left: 32%;
+}
+
+.whatwedo .container p {
+    position: absolute;
+    width: 637px;
+    height: 104px;
+    left: 0%;
+    top: 50%;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: #071629;
+}
+
+.tasks-container {
+    position: absolute;
+    width: 1002px;
+    height: 193px;
+    left: 199px;
+    top: 1300px;
+}
+
+.tasks {
+    position: absolute;
+    width: 1002px;
+    height: 193px;
+    left: 120px;
+    top: 1400px;
+    display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 100%;
+  text-align: center;
+    gap: 200px;
+    padding-bottom: 260px;
+        
+}
+
+.tasks li {
+    list-style: none;
+    font-family: var(--font-family);
+    font-style: normal;    
+    
+}
+.tasks span {
+    color: #FF6565;
+    font-size: 150px;    
+}
+
+@media screen and (max-width: 755px) {
+
+    .whatwedo .container {
+        width: 637px;
+        height: 288px;
+        left: 66px;
+
+    }
+    
+
+    .tasks {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 120% 120%;
+        gap: 0px;
+        left: 15px;
+    }
+
+    .tasks li {
+        width: 207px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .whatwedo .container {
+       width: 325px;
+       height: 288px;
+        
+    }
+
+    .whatwedo .container p {
+        width: 325px;
+        left: 30px;
+        text-align: center;
+    }
+
+    .tasks {
+        display: inline;
+        left: 101px;
+        top: 1550px;
+    
+    }
+    
+}
