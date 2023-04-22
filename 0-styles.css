@@ -1,155 +1,328 @@
-/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/* FONTS */
 
+@font-face {
+    font-family: 'Source sans pro';
+    src: url('/fonts/SourceSansPro-Regular.ttf');
+}
 
-/* Variables
- ======================== */
+@font-face {
+    font-family: 'Spin Cycle';
+    src: url('/fonts/SourceSansPro-SemiBold.ttf');
+}
 
 :root {
-  --orange: #FF6565;
-  --white: white;
+    /* FONTS */
+    --font-family: 'Source sans pro';
+    --font-family-alt: 'Spin Cycle';
 
-  --font-family-normal: 'Source-sans-Pro-Regular';
-  --font-family-bold: 'Source-sans-Pro-Bold';
+    /* COLORS */
+    --red: #FF6565;
+    --white: #FFFFFF;
+}
 
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
 
-  @font-face {
-    font-family: Source-sans-Pro-Regular;
-    src: url(/fonts/Source-sans-Pro-Regular.ttf);
-  }
+/* HEADER */
 
-  @font-face {
-    font-family: Source-sans-Pro-Bold;
-    src: url(/fonts/Source-sans-Pro-Bold.ttf);
-  }
+.header-hero {
+    background-image: url('/images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
 
 }
 
-body {
-  background-image: url(images/headphones_hero_1.jpg);
-  background-repeat: no-repeat;
-  background-size: 1920px 1080px;
+header {
+    position: absolute;
+    width: 1000px;
+    height: 32px;
+    left: 201px;
+    top: 47px;
+}
+
+header .nav_links {
+    position: absolute;
+    width: 455px;
+    height: 15px;
+    left: 946px;
+    top: 10px;
+}
+
+.nav_links li {
+    display: inline;
+    padding: 0px 20px;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 15px;
+    color: var(--white);
+    list-style: none;
 
 }
 
-.header-container {
-  padding-top: 30px;
-}
-
-.header-container input {
-  visibility: hidden;
-  position: absolute;
-}
-
-.header-container:first-child {
-  text-align-last: start;
-}
-
-.header-logo {
-  inline-size: 13px;
-  position: relative;
-}
-
-.nav-icon {
-margin-top: 5px;
-margin-left: 10px;
-inline-size: 95px;
-display: inline-block;
-vertical-align: top;
-text-align: start;
-}
-
-.navbar {
-  align-items: center;
-}
-
-.navbar-list{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  float: right;
-  list-style: none;
- 
-}
-
-.navbar-list li {
-  letter-spacing: 0;
-  min-height: 15px;
-  min-width: 80px;
-  margin: 0 25px;
-  display: inline-block;
-  white-space: nowrap;
-  text-align: justify;
-  padding-right: 25px;
-}
-
-.navbar-list a {
-  font-family: 'Nunito', sans-serif;
-  font-style: normal;
-  color: #FFFFFF;
-  text-decoration: none;
-  text-transform: lowercase;
-  font-size: large;
-  position: absolute;
-}
-
-.navbar-list a:hover {
-  color: var(--orange);
-  transition: ease-out 0.2s;
-}
-
-.header-logo {
-  margin-left: 20px;;
-}
-
-.hero {
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 50%;
-  bottom: 50%;
-  text-align: center;
+.nav_links li:hover {
+    cursor: pointer;
+    color: var(--red);
 }
 
 .hero h1 {
-  font-family: var(--font-family-bold);
-  font-style: bold;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 700;
-  text-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: var(--white);
+    position: absolute;
+    height: 40px;
+    left: 5%;
+    right: 5%;
+    top: 30%;
+    font-family: var(--font-family-alt);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--white);
 }
 
-.hero h2 {
-  font-family: var(--font-family-normal);
-  color: var(--white);
-  font-size: large;
+.hero_title {
+    position: absolute;
+    height: 20px;
+    left: 22%;
+    right: 22%;
+    top: 40%;
+    font-family: var(--font-family-alt);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--white);
 }
 
 button {
-  border: none;
-  border-radius: 20px;
-  font-family: var(--font-family-bold);
-  inline-size: 12%;
-  letter-spacing: .10px;
-  block-size: 48px;
-  background-color: var(--orange);
-  color: var(--white);
-  box-shadow: 3px 15px 30px rgba(0, 0, 0, 0.74);
+    position: absolute;
+    background-color: var(--red);
+    border-radius: 22px;
+    border: none;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+    color: #FFFFFF;
 }
 
-button:hover{
-  background-color: #ff6565c3;
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
 }
 
-.hero-par { 
-  color: var(--white);
-  font-family: var(--font-family-normal);
-  margin-top: 100px;
-  font-size: medium;
-  font-weight: thin;
-  line-height: 30px;
-  max-width: 40%;
-  margin-left: 29%;
+.hero button {
+    position: absolute;
+    width: 230px;
+    height: 50px;
+    left: 44%;
+    right: 40%;
+    top: 50%;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 18px;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero_par {
+    position: absolute;
+    width: 637px;
+    height: 104px;
+    left: 32%;
+    right: 22%;
+    top: 65%;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: var(--white);
+}
+
+
+@media screen and (max-width: 755px) {
+
+    .header_hero {
+        width: 768px;
+        height: 800px;
+    }
+
+    header {
+     width: 633px;
+     height: 32px;
+     left: 66px;
+     top: 29px;
+    }
+
+    header img {
+        width: 161px;
+        height: 32px;
+        left: 66px;
+        top: 29px;
+    }
+
+    header .nav_links {
+        width: 255px;
+        height: 15px;
+        left: 300px;
+        top: -5px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+
+    }
+
+    .nav_links li{
+        font-size: 16px;
+        line-height: 15px;
+        white-space: nowrap; 
+    }
+
+    .hero button {
+        left: 270px;
+    }
+    
+    .hero .hero_par {
+        left: 80px;
+    }
+}    
+
+@media screen and (max-width: 480px) {
+
+    :root {
+        --nav-item-margin: 0;
+    }
+
+    .navbar-menu {
+        flex: 1;
+    }
+
+    header {
+        justify-content: center;
+    }
+    
+    header img {
+        position: absolute;
+        width: 170px;
+        height: 32px;
+        top: 29px;
+    }
+
+    header .nav_links {
+        overflow: hidden;
+        flex-direction: column;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+
+    header .menu-icon {
+        cursor: pointer;
+        padding: 2.5rem;
+        position: relative;
+        user-select: none;
+        display: none;
+    }
+
+    header .menu-icon .navicon {
+        background: var(--white);
+        display: block;
+        height: .2rem;
+        position: relative;
+        width: 1.8rem;
+        left: -45px;;
+      }
+
+      header .menu-icon .navicon:before, header .menu-icon .navicon::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: var(--white);
+        transition: all .2s ease-out;
+        }
+    
+        header .menu-icon .navicon:before {
+            top: .7rem;
+        }
+    
+        header .menu-icon .navicon:after {
+            top: -0.7rem;
+        }
+
+        header .nav_links {
+            width: 161px;
+            height: 32px;
+            top: 60px;
+            left: 70px;
+            font-size: 25px;
+        }
+
+        .nav_links li {
+            font-size: 16px;
+            line-height: 15px;
+            white-space: nowrap;
+            margin: var(--nav-item-margin);
+        }
+
+        .hero button {
+            left: 130px;
+        }
+
+        .hero .hero_par {
+            width: 335px;
+            left: 78px;
+        }
+
+    }
+
+/* menu btn */
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked ~ .nav_links {
+    display: block;
+}
+
+.menu-btn:checked ~ .nav_links {
+    max-height: 100%;
+    overflow: inherit;
+}
+
+header .menu-btn:checked + .menu-icon .navicon {
+    background: transparent;
+} 
+
+header .menu-btn:checked + .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header .menu-btn:checked + .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu-btn:checked + .menu-icon .navicon:before, header .menu-btn:checked + .menu-icon .navicon:after {
+    top: 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    header .menu-icon {
+        display: block;
+    }
+    
 }
